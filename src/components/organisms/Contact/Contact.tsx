@@ -5,7 +5,7 @@ type Props = {};
 
 const Contact = React.forwardRef<HTMLElement>((props: Props, ref) => {
   return (
-    <section className={classes.contact}>
+    <section className={classes.contact} ref={ref}>
       <div className={classes.contact__container}>
         <div className={classes.contact__container__title}>
           <h1>Get In Touch</h1>

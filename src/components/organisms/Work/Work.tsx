@@ -9,7 +9,7 @@ type Props = {};
 
 const Work = React.forwardRef<HTMLElement>((props: Props, ref) => {
   return (
-    <section className={classes.work}>
+    <section className={classes.work} ref={ref}>
       <Header>
         <Title content="My Projects" />
       </Header>
