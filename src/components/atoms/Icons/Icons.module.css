@@ -1,0 +1,5 @@
+.icon {
+  fill: var(--text-primary);
+  aspect-ratio: 4/3.6;
+  cursor: pointer;
+}

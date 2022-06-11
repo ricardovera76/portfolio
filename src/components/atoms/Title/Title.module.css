@@ -1,0 +1,12 @@
+.title{
+  display: block;
+}
+.title--l{
+  font-size: large;
+}
+.title--m{
+  font-size: medium;
+}
+.title--s{
+  font-size: small;
+}

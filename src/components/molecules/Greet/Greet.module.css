@@ -1,0 +1,32 @@
+
+.greet{
+  font-family: var(--alt-font);
+  font-size: larger;
+  color: var(--primary);
+}
+.brief{
+  margin: 15px;
+  font-size: 3rem;
+}
+.brief--alt{
+  margin: 15px;
+  font-size: 3rem;
+  color: var(--text-secondary);
+}
+.brief__info{
+  width: 50%;
+}
+@media (max-width: 780px) {
+  .greet{
+    font-size: small;
+  }
+  .brief{
+    font-size: xx-large;
+  }
+  .brief--alt{
+    font-size: xx-large;
+  }
+  .brief__info{
+    width:90%
+  }
+}
