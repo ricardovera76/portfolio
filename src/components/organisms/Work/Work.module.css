@@ -53,7 +53,7 @@
 .work__item__techs__item {
   width: max-content;
   font-family: var(--alt-font);
-  font-size: 1px;
+  font-size: x-small;
   overflow: hidden;
   margin: 0 10px;
   list-style: none;
