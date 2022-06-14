@@ -6,15 +6,26 @@ import Icon from "../../atoms/IconLogo/IconLogo";
 import classes from "./NavBar.module.css";
 import Button from "../../atoms/Button/Button";
 import Icons from "../../atoms/Icons/Icons";
+import SideBar from "../../molecules/SideBar/SideBar";
 
 const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
   const ctx = useContext(ThemeContext);
-  const [show, setShow] = useState<boolean>(false);
+  const [showNavBar, setShowNavBar] = useState<boolean>(false);
+  const [showSideBar, setShowSideBar] = useState<boolean>(false);
   const logoHeight = 35;
   const logoWidth = 30;
 
   const showNavBarBackground = () => {
-    window.scrollY > 5 ? setShow(true) : setShow(false);
+    window.scrollY > 5 ? setShowNavBar(true) : setShowNavBar(false);
+  };
+
+  const showSideBarHandler = () => {
+    setShowSideBar((prevState: boolean) => !prevState);
+  };
+
+  const mobileSideBarActionHandler = (nav: React.RefObject<HTMLElement>) => {
+    setShowSideBar((prevState: boolean) => !prevState);
+    scrollIntoView(nav);
   };
 
   useEffect(() => {
@@ -22,14 +33,16 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
     return () => {
       window.removeEventListener("scroll", showNavBarBackground);
     };
-  }, [show]);
+  }, [showNavBar]);
 
   const themeHandler = (): void => {
     ctx.toggleDark && ctx.toggleDark();
   };
 
   return (
-    <nav className={`${classes.navbar} ${show ? classes.navbar__down : ""}`}>
+    <nav
+      className={`${classes.navbar} ${showNavBar ? classes.navbar__down : ""}`}
+    >
       <section className={classes.navbar__content}>
         <div className={classes.content__left}>
           <Icon
@@ -68,14 +81,20 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <Button>
+              <Button onClick={showSideBarHandler}>
                 <Icons type="menu" width="20px" />
               </Button>
               <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
             </motion.div>
           )}
           <AnimatePresence exitBeforeEnter>
-            {}
+            {showSideBar && (
+              <SideBar
+                showSidebar={showSideBarHandler}
+                mobileSidebar={mobileSideBarActionHandler}
+                navRefs={navRefs}
+              />
+            )}
           </AnimatePresence>
         </motion.div>
       </section>
