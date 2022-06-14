@@ -17,7 +17,7 @@
   border: none;
   background-color: var(--primary);
   border-radius: 10px;
-  min-width: 45%;
+  min-width: 25%;
   min-height: 2rem;
   transform: scale(1.5);
   display: flex;

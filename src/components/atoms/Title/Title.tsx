@@ -12,6 +12,9 @@ const Title = ({ size, content }: Props) => {
     case "large":
       cssClass = classes["title--l"];
       break;
+    case "large-alt":
+      cssClass = classes["title--l-alt"];
+      break;
     case "medium":
       cssClass = classes["title--m"];
       break;

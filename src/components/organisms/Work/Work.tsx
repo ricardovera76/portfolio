@@ -11,7 +11,7 @@ const Work = React.forwardRef<HTMLElement>((props: Props, ref) => {
   return (
     <section className={classes.work} ref={ref}>
       <Header>
-        <Title content="My Projects" />
+        <Title content="My Projects"/>
       </Header>
       <ul className={classes.work__container}>
         <Card alt={false}>
@@ -34,7 +34,7 @@ const Work = React.forwardRef<HTMLElement>((props: Props, ref) => {
                 </a>
               </>
             </Header>
-            <Title content="Notes App" size="large" />
+            <Title content="Notes App" />
             <div className={classes.work__item__description}>
               In this Web-App, you can store and create your notes, the used
               technologies are: React.js, Framer Motion which is used for
@@ -76,7 +76,7 @@ const Work = React.forwardRef<HTMLElement>((props: Props, ref) => {
                 </a>
               </>
             </Header>
-            <Title content="React Meetups" />
+            <Title content="React Meetups"/>
             <div className={classes.work__item__description}>
               In this Web-App, people can set and store cool places to meet with
               each other, the technologies used are: Next.js as the main JS

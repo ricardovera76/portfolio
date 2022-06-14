@@ -1,14 +1,12 @@
-import React from 'react';
-import classes from "./ListItem.module.css"
+import React from "react";
+import classes from "./ListItem.module.css";
 
 type Props = {
-  content: string
-}
+  children: string | JSX.Element | JSX.Element[];
+};
 
-const ListItem = ({content}: Props) => {
-  return (
-    <li className={classes.item}>{content}</li>
-  )
-}
+const ListItem = ({ children }: Props) => {
+  return <li className={classes.item}>{children}</li>;
+};
 
-export default ListItem
+export default ListItem;

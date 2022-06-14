@@ -1,24 +1,18 @@
 import React from "react";
+import ListItem from "../../atoms/ListItem/ListItem";
 import classes from "./Skills.module.css";
 
-type Props = {};
+type Props = {
+  skillList: string[];
+};
 
-const Skills = (props: Props) => {
+const Skills = ({ skillList }: Props) => {
   return (
     <div className={classes.skill}>
       <ul className={classes.skill__list}>
-        <li>JavaScript (ES6+) </li>
-        <li>TypeScript</li>
-        <li>ReactJS and Next JS</li>
-        <li>Node.js</li>
-        <li>Express JS</li>
-        <li>Git</li>
-        <li>Redux</li>
-        <li>CI/CD</li>
-        <li>NoSQL and SQL Data bases (MongoDB, Firebase, Postgre)</li>
-        <li>Framer Motion</li>
-        <li>UI/UX Libraries (Material UI,TailwindCSS</li>
-        <li>Design Patterns (Atomic Design, BEM Design)</li>
+        {skillList.map((skill, index) => (
+          <ListItem key={index}>{skill}</ListItem>
+        ))}
       </ul>
     </div>
   );

@@ -42,31 +42,26 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
           />
         </div>
         <motion.div className={classes.content__right}>
-          <AnimatePresence>
-            {width > 780 && (
-              <motion.div
-                className={classes.content__right__content}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <span onClick={() => scrollIntoView(navRefs.aboutRef)}>
-                  About Me
-                </span>
-                <span onClick={() => scrollIntoView(navRefs.experienceRef)}>
-                  Experience
-                </span>
-                <span onClick={() => scrollIntoView(navRefs.workRef)}>
-                  Work
-                </span>
-                <span onClick={() => scrollIntoView(navRefs.contactRef)}>
-                  Contact
-                </span>
-                <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          {width < 780 && (
+          {width > 780 ? (
+            <motion.div
+              className={classes.content__right__content}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <span onClick={() => scrollIntoView(navRefs.aboutRef)}>
+                About Me
+              </span>
+              <span onClick={() => scrollIntoView(navRefs.experienceRef)}>
+                Experience
+              </span>
+              <span onClick={() => scrollIntoView(navRefs.workRef)}>Work</span>
+              <span onClick={() => scrollIntoView(navRefs.contactRef)}>
+                Contact
+              </span>
+              <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
+            </motion.div>
+          ) : (
             <motion.div
               className={classes.content__right__content}
               initial={{ opacity: 0 }}
@@ -79,7 +74,9 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
               <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
             </motion.div>
           )}
-          <AnimatePresence></AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
+            {}
+          </AnimatePresence>
         </motion.div>
       </section>
     </nav>

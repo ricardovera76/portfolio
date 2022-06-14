@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./CardNav.module.css";
-import { Experience as Exp } from "../../../assets/Experience";
+import { Experience as Exp } from "../../../assets/Details";
 import { motion } from "framer-motion";
 
 type Props = {

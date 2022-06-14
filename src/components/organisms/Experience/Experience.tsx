@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Experience.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { AllExperience, Experience as Exp } from "../../../assets/Experience";
+import { AllExperience, Experience as Exp } from "../../../assets/Details";
 import Title from "../../atoms/Title/Title";
 import CardNav from "../../molecules/CardNav/CardNav";
 import ListItem from "../../atoms/ListItem/ListItem";
@@ -38,12 +38,12 @@ const Experience = React.forwardRef<HTMLElement>((props: Props, ref) => {
                   <Title size="small" content={selectedTab.title} />
                   <ul>
                     {selectedTab.tasks.map((task, index) => (
-                      <ListItem key={index} content={task} />
+                      <ListItem key={index}>{task}</ListItem>
                     ))}
                   </ul>
                 </>
               ) : (
-                "null"
+                null
               )}
             </motion.div>
           </AnimatePresence>
