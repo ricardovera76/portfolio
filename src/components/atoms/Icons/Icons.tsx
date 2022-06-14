@@ -4,6 +4,7 @@ import Dark from "../../../assets/dark.svg";
 import Light from "../../../assets/light.svg";
 import LinkedIn from "../../../assets/linkedin.svg"
 import GitHub from "../../../assets/github.svg"
+import Menu from "../../../assets/menu.svg"
 import classes from "./Icons.module.css"
 
 type Props = {
@@ -28,10 +29,12 @@ const Icons = ({ width, type }: Props) => {
             ? LinkedIn
             : type === "git"
             ? GitHub
+            : type === "menu"
+            ? Menu
             : ""
         }
         style={{
-          width: `${width}px`
+          width: `${parseInt(width)}px`
         }}
         className={classes.icon}
         alt={`${type} icon`}
@@ -41,6 +44,3 @@ const Icons = ({ width, type }: Props) => {
 };
 
 export default Icons;
-
-/*
- */

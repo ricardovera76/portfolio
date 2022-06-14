@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
-import {INavRefProps} from "./navbarTypes"
+import { INavRefProps } from "./navbarTypes";
 import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../../../context/ThemeContext";
 import Icon from "../../atoms/IconLogo/IconLogo";
 import classes from "./NavBar.module.css";
-
+import Button from "../../atoms/Button/Button";
+import Icons from "../../atoms/Icons/Icons";
 
 const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
   const ctx = useContext(ThemeContext);
@@ -31,7 +32,14 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
     <nav className={`${classes.navbar} ${show ? classes.navbar__down : ""}`}>
       <section className={classes.navbar__content}>
         <div className={classes.content__left}>
-          <Icon theme={theme} height={logoHeight} width={logoWidth} onClick={() => {window.location.reload()}}/>
+          <Icon
+            theme={theme}
+            height={logoHeight}
+            width={logoWidth}
+            onClick={() => {
+              window.location.reload();
+            }}
+          />
         </div>
         <motion.div className={classes.content__right}>
           <AnimatePresence>
@@ -48,27 +56,30 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
                 <span onClick={() => scrollIntoView(navRefs.experienceRef)}>
                   Experience
                 </span>
-                <span onClick={() => scrollIntoView(navRefs.workRef)}>Work</span>
+                <span onClick={() => scrollIntoView(navRefs.workRef)}>
+                  Work
+                </span>
                 <span onClick={() => scrollIntoView(navRefs.contactRef)}>
                   Contact
                 </span>
-                <button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</button>
+                <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
               </motion.div>
             )}
           </AnimatePresence>
-          <AnimatePresence>
-            {width < 780 && (
-              <motion.div
-                className={classes.content__right__content}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <button>=</button>
-                <button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {width < 780 && (
+            <motion.div
+              className={classes.content__right__content}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Button>
+                <Icons type="menu" width="20px" />
+              </Button>
+              <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
+            </motion.div>
+          )}
+          <AnimatePresence></AnimatePresence>
         </motion.div>
       </section>
     </nav>

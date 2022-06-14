@@ -1,5 +1,4 @@
 .navbar {
-  /* background-color: aqua; */
   margin: 0;
   position: fixed;
   top: 0;
@@ -44,22 +43,13 @@
   cursor: pointer;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background-color: var(--secondary);
-  border-radius: 10px;
-  width: 3rem;
-  height: 1.5rem;
-  transition: all 0.8s;
-}
-
-button:hover{
-  background-color: var(--primary);
-}
-
 @media (max-width: 1000px) {
   .content__right {
-    width: 55%;
+    min-width: 30%;
+  }
+}
+@media (max-width: 500px) {
+  .content__right {
+    min-width: 50%;
   }
 }

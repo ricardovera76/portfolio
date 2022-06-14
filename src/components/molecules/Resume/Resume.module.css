@@ -4,32 +4,21 @@
   align-items: center;
   justify-content: center;
 }
-.resume a {
+.resume__link {
   width: 80%;
   display: flex;
   justify-content: flex-start;
   text-decoration: none;
   height: 100%;
-}
-.resume a button {
-  height: max-content;
-  width: max-content;
-  padding: 5px 10px;
-  color: #ffffff;
-  transform: scale(1.6);
-}
-.resume button a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.resume button:hover {
-  box-shadow: var(--shadow-button);
+  width: fit-content;
+  color: var(--text-primary);
+  font-size: x-large;
+  transition: all 0.5s;
 }
 
-@media (max-width: 780px) {
-  .resume button {
+@media (max-width: 900px) {
+  .resume__link {
     width: 70%;
-    font-size: x-small;
-    transform: scale(1.5);
+    font-size: small;
   }
 }
