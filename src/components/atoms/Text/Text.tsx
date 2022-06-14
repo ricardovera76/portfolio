@@ -3,11 +3,23 @@ import classes from "./Text.module.css";
 
 type Props = {
   children: JSX.Element | JSX.Element[] | string;
-  isAlt?: boolean
+  type?: number;
 };
 
-const Text = ({ children, isAlt = false }: Props) => {
-  return <p className={isAlt ? classes["text--alt"] : classes.text}>{children}</p>;
+const Text = ({ children, type = 1 }: Props) => {
+  return (
+    <p
+      className={
+        type === 2
+          ? classes["text--alt-2"]
+          : type === 3
+          ? classes["text--alt-3"]
+          : classes.text
+      }
+    >
+      {children}
+    </p>
+  );
 };
 
 export default Text;

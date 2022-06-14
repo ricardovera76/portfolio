@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AllExperience, Experience as Exp } from "../../../assets/Details";
 import Title from "../../atoms/Title/Title";
 import CardNav from "../../molecules/CardNav/CardNav";
-import ListItem from "../../atoms/ListItem/ListItem";
 import Card from "../../atoms/Card/Card";
 import Header from "../../atoms/Header/Header";
+import List from "../../molecules/List/List";
 
 type Props = {};
 
@@ -36,11 +36,7 @@ const Experience = React.forwardRef<HTMLElement>((props: Props, ref) => {
               {selectedTab ? (
                 <>
                   <Title size="small" content={selectedTab.title} />
-                  <ul>
-                    {selectedTab.tasks.map((task, index) => (
-                      <ListItem key={index}>{task}</ListItem>
-                    ))}
-                  </ul>
+                  <List content={selectedTab.tasks}/>
                 </>
               ) : (
                 null

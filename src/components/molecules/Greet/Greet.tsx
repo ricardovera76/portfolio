@@ -5,7 +5,7 @@ import Title from "../../atoms/Title/Title";
 const Greet = () => {
   return (
     <>
-      <Text isAlt={true}>Hi!, mi name is</Text>
+      <Text type={2}>Hi!, mi name is</Text>
       <Title size="large" content="Ricardo Vera." />
       <Title size="large-alt" content="I Build things for the web." />
       <Text>

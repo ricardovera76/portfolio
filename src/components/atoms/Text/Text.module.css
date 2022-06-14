@@ -3,8 +3,14 @@
   text-align: justify;
 }
 
-.text--alt{
+.text--alt-2{
   font-family: var(--alt-font);
   font-size: larger;
   color: var(--primary);
+}
+
+.text--alt-3 {
+  font-family: var(--info-font);
+  font-size: x-small;
+  margin: 15px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import ListItem from "../../atoms/ListItem/ListItem";
+import List from "../List/List";
 import classes from "./Skills.module.css";
 
 type Props = {
@@ -9,11 +9,7 @@ type Props = {
 const Skills = ({ skillList }: Props) => {
   return (
     <div className={classes.skill}>
-      <ul className={classes.skill__list}>
-        {skillList.map((skill, index) => (
-          <ListItem key={index}>{skill}</ListItem>
-        ))}
-      </ul>
+      <List content={skillList}/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .title{
   display: block;
+  margin: 0;
 }
 .title--l{
   margin: 15px;

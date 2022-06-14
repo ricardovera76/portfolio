@@ -72,7 +72,13 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
               <span onClick={() => scrollIntoView(navRefs.contactRef)}>
                 Contact
               </span>
-              <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
+              <Button onClick={themeHandler}>
+                {ctx.dark ? (
+                  <Icons type="dark" width="23px" />
+                ) : (
+                  <Icons type="light" width="23px" />
+                )}
+              </Button>
             </motion.div>
           ) : (
             <motion.div
@@ -84,7 +90,13 @@ const NavBar = ({ width, theme, navRefs, scrollIntoView }: INavRefProps) => {
               <Button onClick={showSideBarHandler}>
                 <Icons type="menu" width="20px" />
               </Button>
-              <Button onClick={themeHandler}>{ctx.dark ? "🌙" : "🌞"}</Button>
+              <Button onClick={themeHandler}>
+                {ctx.dark ? (
+                  <Icons type="dark" width="23px" />
+                ) : (
+                  <Icons type="light" width="23px" />
+                )}
+              </Button>
             </motion.div>
           )}
           <AnimatePresence exitBeforeEnter>

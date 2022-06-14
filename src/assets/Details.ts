@@ -4,6 +4,45 @@ export interface Experience {
   tasks: string[];
 }
 
+export interface IProjectsList {
+  repo: string;
+  live: string;
+  title: string;
+  description: string;
+  techs: string[];
+}
+
+export const ProjectsList: IProjectsList[] = [
+  {
+    repo: "https://github.com/REXXAR-677/notes-app",
+    live: "https://notesapp-b3jcmzwqq-rexxar-677.vercel.app",
+    title: "Notes App",
+    description: `In this Web-App, you can store and create your notes, the used
+    technologies are: React.js, Framer Motion which is used for
+    handling the animations, React-Router-Dom to handle page routing,
+    CSS Modules, Lottie for Animated Icons, Firebase Auth for
+    authentication and Firestore as a NoSQL database.`,
+    techs: ["React JS", "Redux", "Firebase", "Framer Motion", "React-Lottie"],
+  },
+  {
+    repo: "https://github.com/REXXAR-677/Next-meetups-app",
+    live: "https://next-test-2nd-app.vercel.app",
+    title: "React Meetups",
+    description: `In this Web-App, people can set and store cool places to meet with
+    each other, the technologies used are: Next.js as the main JS
+    framework, CSS Modules and MongoDB as NoSQL database.`,
+    techs: ["Next JS", "Mongo DB", "CSS Modules"],
+  },
+  {
+    repo: "https://github.com/REXXAR-677/Hacker-news",
+    live: "https://hacker-news-2naksh5og-rexxar-677.vercel.app",
+    title: "Hacker News",
+    description: `In This Web-App you can read, see and save all the news related to
+    the main JS Frameworks / Libraries like Angular, React JS and VUE.`,
+    techs: ["React JS", "React-Router", "React-Lottie"],
+  },
+];
+
 export const SkillList: string[] = [
   "JavaScript (ES6+) ",
   "TypeScript",
@@ -21,7 +60,7 @@ export const SkillList: string[] = [
 
 export interface IDetails {
   title: string;
-  text: string[];
+  text: string[] | string;
 }
 
 export const ContactInfo: IDetails = {
