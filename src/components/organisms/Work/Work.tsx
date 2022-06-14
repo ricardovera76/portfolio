@@ -19,7 +19,7 @@ const Work = React.forwardRef<HTMLElement>((props: Props, ref) => {
       </Header>
       <ul className={classes.work__container}>
         {ProjectsList.map((project, index) => (
-          <Card alt={false}>
+          <Card key={index} alt={false}>
             <>
               <Header alt={true}>
                 <>
