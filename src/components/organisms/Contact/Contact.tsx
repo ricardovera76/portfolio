@@ -5,7 +5,7 @@ import Info from "../../molecules/Info/Info";
 import classes from "./Contact.module.css";
 
 const Contact = React.forwardRef<HTMLElement>((_, ref) => {
-  const contactLink = "mailto:ricardovera71@gmail.com";
+  const contactLink = "mailto:ricardoverarondon@gmail.com";
   return (
     <section className={classes.contact} ref={ref}>
       <div className={classes.contact__container}>
