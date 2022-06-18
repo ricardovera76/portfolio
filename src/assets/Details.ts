@@ -41,7 +41,7 @@ export const ProjectsList: IProjectsList[] = [
   },
   {
     repo: "https://github.com/ricardovera76/Next-meetups-app.git",
-    live: "https://hacker-news-rv.vercel.app",
+    live: "https://react-meetups-rv.vercel.app",
     title: "React Meetups",
     description: `In this Web-App, people can set and store cool places to meet with
       each other, the technologies used are: Next.js as the main JS
