@@ -4,7 +4,7 @@ import GoTo from "../../molecules/GoTo/GoTo";
 import classes from "./Main.module.css";
 const Main = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1aUzuhKd_d_1A-pRfMbDH6kM6Ak0R4S-M/view?usp=sharing";
+    "https://drive.google.com/file/d/1YTrqBcevYOJmnYcPW4hqsSQVAtBG17e1/view?usp=sharing";
   return (
     <section className={classes.main}>
       <div className={classes.content}>
