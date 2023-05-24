@@ -19,8 +19,7 @@ export const ProjectsList: IProjectsList[] = [
     repo: "https://github.com/conext-noc/dashboard.git",
     live: "http://conext.net.ve",
     title: "CONEXT. Dashboard",
-    description: `This Web-App is used inthe CONEXT Venezuela Facilities as a GUI for Network operations and system monitoring, the technologies used are: Next.js as the main TS
-      framework, CSS Modules, REST API's, Husky, EsLint, Prettier, Atomic Design`,
+    description: `This Web-App is used inthe CONEXT Venezuela Facilities as a GUI for Network operations and system monitoring, the technologies used are: Next.js as the main JS framework, CSS Modules, REST API's, Husky, EsLint, Prettier, Atomic Design, TypeScript`,
     techs: ["Next JS", "TypeScript", "CSS Modules"],
   },
   {
