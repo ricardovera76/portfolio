@@ -12,7 +12,17 @@ export interface IProjectsList {
   techs: string[];
 }
 
+export const ResumeLink: string = "https://drive.google.com/file/d/1-GhvCfggA6kMEgD6ERLx7aqfAhRhqXI-/view?usp=sharing"
+
 export const ProjectsList: IProjectsList[] = [
+  {
+    repo: "https://github.com/conext-noc/dashboard.git",
+    live: "http://conext.net.ve",
+    title: "CONEXT. Dashboard",
+    description: `This Web-App is used inthe CONEXT Venezuela Facilities as a GUI for Network operations and system monitoring, the technologies used are: Next.js as the main TS
+      framework, CSS Modules, REST API's, Husky, EsLint, Prettier, Atomic Design`,
+    techs: ["Next JS", "TypeScript", "CSS Modules"],
+  },
   {
     repo: "https://github.com/ricardovera76/notes-app.git",
     live: "https://notesapp-rv.vercel.app",
@@ -56,6 +66,14 @@ export const SkillList: string[] = [
   "ReactJS and Next JS",
   "Node.js",
   "Express JS",
+  "Python",
+  "Django",
+  "DRF",
+  "AWS",
+  "DOCKER",
+  "Micro Services",
+  "CCNA & CCNP & CyberSecurity",
+  "NetOps & DevOps",
   "Git",
   "Redux",
   "CI/CD",
@@ -89,13 +107,13 @@ export const AboutMe: IDetails = {
   currently working remotely as a freelancer for clients all over the
   world. My interest in web development started back in 2017, when I
   wondered how the internet work and how web pages worked, those questions
-  lead me to a Udemy course, since then I love the web development and
+  lead me to a Udemy course, since then I love the web and software development and
   coding in general.`,
     `Fast-forward to today, and I’ve had the privilege of working at a
   start-up, I'm currently working on a freelance projects. I've also made
   the CISCO CCNA, CISCO CyberOPS, LACNIC advanced BGP, LACNIC IPV6 courses
   and LACNIC Network Management courses and certifications.`,
-    `I have over one year of experience working with technologies like:`,
+    `I have over 3 years of experience working with technologies like:`,
   ],
 };
 
@@ -128,6 +146,21 @@ export const AllExperience: Experience[] = [
       "Create and maintain software documentation",
       "Ensure cross-browser compatibility of new features",
       "Be responsible for maintaining, expanding, and scaling our site",
+    ],
+  },
+  {
+    company: "CONEXT",
+    title: "Network Automation, NetOps, DevOps and Software Developer",
+    tasks: [
+      "Monitor, manage and maintain all edge network devices, performance, and quality across networks.",
+      "Development of multiple Python SSH scripts to automate company’s proccess and automate network operations.",
+      "Document and distribute all major incident review reports in the agreed format.",
+      "Development of backend service with microservices architecture using Django,AWS,Docker and prometheus.",
+      "Local Server Administration and Configuration.",
+      "Domain Administration and configuration.",
+     "Development of Web apps for company’s events and Administration.",
+      "Document Server and Apps Configuration, Code and Cloud administration.",
+      "Administration of Cloud infrastructure (AWS).",
     ],
   },
 ];
