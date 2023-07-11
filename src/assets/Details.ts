@@ -12,7 +12,7 @@ export interface IProjectsList {
   techs: string[];
 }
 
-export const ResumeLink: string = "https://drive.google.com/file/d/1-GhvCfggA6kMEgD6ERLx7aqfAhRhqXI-/view?usp=sharing"
+export const ResumeLink: string = "https://drive.google.com/file/d/1hj8zB6EWTl8N73gBtrrD7udoIGIYCPCp/view?usp=sharing"
 
 export const ProjectsList: IProjectsList[] = [
   {
